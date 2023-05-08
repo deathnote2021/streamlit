@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
 import os
+import oss2
 st.title("streamlit demo") #最上面的标题
 
 # 交互
