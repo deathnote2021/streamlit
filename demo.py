@@ -86,3 +86,14 @@ st.write(df)
 ## 读取现成的
 df = pd.read_csv(savepath)
 st.write(df)
+
+import oss2
+# 创建 OSS 对象
+auth = oss2.Auth('LTAI5tKxybGrnCzFsLD9sRBi', 'TcXGqdbLzoSHA8qdhOWQIOqbHZAaq1')  
+bucket = oss2.Bucket(auth, 'http://oss-cn-chengdu.aliyuncs.com', 'deathnote-data')
+
+# 上传本地文件到 OSS
+local_file = savepath #'test.txt'  # 本地文件路径
+object_key = savepath #'stat/test.txt'  # OSS 对象键值，即上传到 OSS 后的文件名
+with open(local_file, 'rb') as f:
+    bucket.put_object(object_key, f)
