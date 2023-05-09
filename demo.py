@@ -89,8 +89,8 @@ st.write(df)
 
 import oss2
 # 创建 OSS 对象
-auth = oss2.Auth('LTAI5tKxybGrnCzFsLD9sRBi', 'TcXGqdbLzoSHA8qdhOWQIOqbHZAaq1')  
-bucket = oss2.Bucket(auth, 'http://oss-cn-chengdu.aliyuncs.com', 'deathnote-data')
+auth = oss2.Auth('LTAI5tL1cEyEoVeSK58fJ86Q', 'yUPaV4nOmCcYbBVQ72wsQ7ebKRp0I7')  #other
+bucket = oss2.Bucket(auth, 'http://oss-cn-chengdu.aliyuncs.com', 'pubdata')
 
 # 上传本地文件到 OSS
 local_file = savepath #'test.txt'  # 本地文件路径
